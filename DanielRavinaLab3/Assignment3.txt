@@ -1,0 +1,181 @@
+Assignment 3
+Daniel Ravina #A00844542
+
+1.
+  (a)
+    (i)
+      Algorithm OptimizedBubbleSort(A[0 .. n − 1])
+        for i ← 0 to n - 1
+          didSwap = false
+          for j ← 0 to n - 1 {
+            if A[j+1] < A[j]
+              swap A[i] and A[i + 1]
+              didSwap = true;
+          return if didSwap = false
+
+      (ii)
+        Algorithm CocktailSort(A[0 .. n − 1])
+          do
+            didSwap ← false
+            for i ← 0 to n − 2
+              if A[i+1] < A[i]
+                swap A[i] and A[i + 1]
+                didSwap ← true
+            for i ← n -2 to 0
+              if A[i+1] < A[i]
+                swap A[i] and A[i + 1]
+                didSwap ← true
+          while didSwap = true
+
+    (b)
+      (i) + (ii)
+        let T = Running time of Algorithm(A[0 .. n − 1]) { .. }
+        T(n)  = (n - 1) + (n - 2) + ... + (1) = n(n - 1)/2
+
+        BASIC OPERATION: Comparison
+        WORST CASE:      O(n^2)
+        BEST CASE:       O(n)
+
+    (c)
+      (i)  See bubble_swap_indicator.java
+      (ii) See cocktail_sort.java
+
+    (d)
+      (i)
+        BubbleSwapIndicator:
+        --------------------------------------
+        Sorting integerArray1000
+        Number of Swaps:        242698
+        Number of Comparisons:  998001
+        --------------------------------------
+        Sorting integerArray10000
+        Number of Swaps:        24936914
+        Number of Comparisons:  99980001
+        --------------------------------------
+        Sorting integerArray100000
+        Number of Swaps:        2407905288
+        Number of Comparisons:  9999800001
+        --------------------------------------
+      (ii)
+        CocktailSort:
+        --------------------------------------
+        Sorting integerArray1000
+        Number of Swaps:        242698
+        Number of Comparisons:  500996
+        --------------------------------------
+        Sorting integerArray10000
+        Number of Swaps:        24936914
+        Number of Comparisons:  50169964
+        --------------------------------------
+        Sorting integerArray100000
+        Number of Swaps:        2407905288
+        Number of Comparisons:  4780504388
+        --------------------------------------
+
+      Comment:
+        1. integerArray100000 for both variations was REALLY slow compare to the first 2.
+        2. The SwapIndicator has only 50% chance to work, and that is when the list is already sorted
+        3. I don't understand why the number of comparisons (basic operation) For cocktail sort is less then the bubble sort
+           but it is still considered a worst case of O(n^2)?
+
+2.
+    let 1 = dark disk
+    let 0 = light disk
+    let A = alternate list of light disks and dark disks ( i.e [1,0,1,0,1,0...] )
+
+    Algorithm AlternatingDisks( A[0..n -1] )
+      do
+        swappd = false
+        for i in 0 to n - 2
+          if A(i) > A(i+1)
+            A(i)   ← 0
+            A(i+1) ← 1
+            swapped = true
+      while swapped = true
+
+    NUMBER OF MOVE WHEN n = 2
+    Iteration 1:
+    [1,0]
+    [0,1]
+    NUMBER OF MOVES: 1
+
+    NUMBER OF MOVE WHEN n = 4
+    Iteration 1:
+    [1,0,1,0]
+    [0,1,1,0]
+    [0,1,0,1]
+    Iteration 2:
+    [0,1,0,1]
+    [0,0,1,1]
+    NUMBER OF MOVES: 5
+
+    NUMBER OF MOVE WHEN n = 6
+    Iteration 1:
+    [1,0,1,0,1,0]
+    [0,1,1,0,1,0]
+    [0,1,0,1,1,0]
+    [0,1,0,1,0,1]
+    Iteration 2:
+    [0,1,0,1,0,1]
+    [0,0,1,1,0,1]
+    [0,0,1,0,1,1]
+    Iteration 3:
+    [0,0,1,0,1,1]
+    [0,0,0,1,1,1]
+    NUMBER OF MOVES: 9
+
+    NUMBER OF MOVE WHEN n = 8
+    Iteration 1:
+    [1,0,1,0,1,0,1,0]
+    [0,1,1,0,1,0,1,0]
+    [0,1,0,1,1,0,1,0]
+    [0,1,0,1,0,1,1,0]
+    [0,1,0,1,0,1,0,1]
+    Iteration 2:
+    [0,1,0,1,0,1,0,1]
+    [0,0,1,1,0,1,0,1]
+    [0,0,1,0,1,1,0,1]
+    [0,0,1,0,1,0,1,1]
+    Iteration 3:
+    [0,0,0,1,1,0,1,1]
+    [0,0,0,1,0,1,1,1]
+    Iteration 4:
+    [0,0,0,0,1,1,1,1]
+    NUMBER OF MOVES: 12
+
+
+3.
+  General Steps:
+  1. Sum up the numbers in the set
+  2. if the sum is even - continue, otherwise stop (cannot be done)
+  3. Loop through the set. and add up the numbers and check the result with the following:
+  4. if result is less than sum/2 - continue
+  5. if the result is exactly sum/2 - return the list - we're done
+  6. if the result is more than sum/2, premutate the list and go back to step 3
+
+  PartitionAlgorithm(S[0.. n])
+    sum         ← 0
+    partitioned ← false
+    for i ← 0 to n - 1
+      sum += S[i]
+    rerun if sum%2 !=
+    do
+    subSum ← 0
+    for i ← 0 to n - 1
+      subSum += S[i]
+      if subSum == sum
+         partitioned ← true
+         break
+      else if subSum > sum
+        break
+    while partitioned = true
+
+    return S
+
+
+  Premutate(S)
+    return premutated list
+
+
+
+  Worst Case is O(2^n)

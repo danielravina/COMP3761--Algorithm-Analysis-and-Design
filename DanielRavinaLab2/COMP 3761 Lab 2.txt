@@ -1,0 +1,161 @@
+COMP 3761 Assignment 2
+Daniel Ravina #A00844542
+
+PART 1
+
+(A)
+  (a)
+    A(n) =  2 * A(n-1) + 3, A(1) = 3
+  (b)
+    i.
+      Multiplication
+    ii.
+      T(n) = T(n - 1) + 1
+      T(1) = 0
+
+    iii.
+      T(1) = 0
+      T(2) = 1
+      T(3) = 2
+      T(4) = 3
+      ===========
+      T(n) = n - 1
+
+    iv.
+      O(n)
+
+(B)
+  (a)
+    B(n) = B(n/2) + n, B(1) = 1
+  (b)
+    i.
+      Addition
+    ii.
+      T(n) = T(n/2) + 1
+      T(1) = 0
+    iii.
+      T(2^0) = 0
+      T(2^1) = 1
+      T(2^2) = 2
+      T(2^3) = 3
+      ==========
+      T(n^2) = n
+      T(n) = Log2 n
+    iv.
+      O(Log n)
+
+
+(C)
+  (a)
+    C(n) = C(n-1) + n, C(0) = 0
+  (b)
+    i.
+      Addition
+    ii.
+      T(n) = T(n-1) + 1
+      T(0) = 0
+    iii.
+      T(0) = 0
+      T(1) = 1
+      T(2) = 2
+      T(3) = 3
+      =========
+      T(n) = n
+    iv.
+      O(n)
+
+(D)
+  (a)
+    D(n) = D(n/3) +1, D(n) = 1
+  (b)
+    i.
+      Addition
+
+    ii.
+      T(n) = T(n/3) + 1
+      T(1) = 0
+
+    iii.
+      T(3^0) = 0
+      T(3^1) = 1
+      T(3^2) = 2
+      T(3^3) = 3
+      ========
+      T(3^n) = n
+      T(n) = Log3n
+
+    iii.
+      O(Log n)
+
+
+
+PART 2
+
+(a) This algorithm is a sorting algorithm.
+(b) Comparison
+
+(c) Best Case:
+    M(n) = (n - 1) + 1
+    M(1) = 0
+
+    # Constant
+
+    Worst Case:
+    M(n) = (n - 1) + n
+
+(d)
+
+(e)
+  O(n^2) #worst
+  O(n) #best
+
+  (f) + (g) + (h)
+
+  18:10 ~/Desktop/3761/lab/DanielRavinaLab2  $ javac lab_2.java && java LabTwo
+  Enter a size (n) for the array: 5
+  Sorted Array
+  [0, 1, 2, 3, 4]
+  [0, 1, 2, 3, 4]
+  operationCount is: 4
+  Reversed Array
+  [4, 3, 2, 1, 0]
+  [0, 1, 2, 3, 4]
+  operationCount is: 10
+  Random Array
+  [313, 847, 9, 165, 708]
+  [9, 165, 313, 708, 847]
+  operationCount is: 8
+
+  18:11 ~/Desktop/3761/lab/DanielRavinaLab2  $ javac lab_2.java && java LabTwo
+  Enter a size (n) for the array: 5
+  Sorted Array
+  [0, 1, 2, 3, 4]
+  [0, 1, 2, 3, 4]
+  operationCount is: 4
+  Reversed Array
+  [4, 3, 2, 1, 0]
+  [0, 1, 2, 3, 4]
+  operationCount is: 10
+  Random Array
+  [405, 751, 757, 472, 798]
+  [405, 472, 751, 757, 798]
+  operationCount is: 6
+
+  18:12 ~/Desktop/3761/lab/DanielRavinaLab2  $ javac lab_2.java && java LabTwo
+  Enter a size (n) for the array: 10
+  Sorted Array
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  operationCount is: 9
+  Reversed Array
+  [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  operationCount is: 45
+  Random Array
+  [383, 567, 629, 256, 179, 69, 982, 866, 695, 685]
+  [69, 179, 256, 383, 567, 629, 685, 695, 866, 982]
+  operationCount is: 24
+
+
+
+  Comments: It looks as if the rendomize array operation count depends on its value.

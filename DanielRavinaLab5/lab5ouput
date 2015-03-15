@@ -1,0 +1,62 @@
+Question 1:
+===============================================
+Median For integerArray1000 is: 499
+Median For integerArray10000 is: 4999
+Median For integerArray100000 is: 49999
+
+Question 2
+===============================================
+---------- Assignment 1 ----------
+integerArray10000:
+  inversion count:  124255
+  comparison count: 499500
+integerArray100000:
+  inversion count:  12967899
+  comparison count: 49995000
+integerArray1000000:
+  inversion count:  1225521692
+  comparison count: 704982704
+---------- Assignment 5 ----------
+integerArray1000:
+  inversion count:  124255
+  comparison count: 9976
+integerArray10000:
+  inversion count:  12967899
+  comparison count: 133616
+integerArray100000:
+  inversion count:  1225521692
+  comparison count: 1668928
+
+Question 3:
+===============================================
+
+---------- First Pivot ----------
+    ---------- Random Array ----------
+    Array Sorted?          true
+    Number of comparisons: 39500
+    ---------- Reversed Array ----------
+    Array Sorted?          true
+    Number of comparisons: 12499
+    ---------- Sorted Array ----------
+    Array Sorted?          true
+    Number of comparisons: 5000
+---------- Random Pivot ----------
+    ---------- Random Array ----------
+    Array Sorted?          true
+    Number of comparisons: 39628
+    ---------- Reversed Array ----------
+    Array Sorted?          true
+    Number of comparisons: 11674
+    ---------- Sorted Array ----------
+    Array Sorted?          true
+    Number of comparisons: 6708
+---------- Median Pivot ----------
+    ---------- Random Array ----------
+    Array Sorted?          true
+    Number of comparisons: 39388
+    ---------- Reversed Array ----------
+    Array Sorted?          true
+    Number of comparisons: 10904
+    ---------- Sorted Array ----------
+    Array Sorted?          true
+    Number of comparisons: 5904

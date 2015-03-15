@@ -1,0 +1,9 @@
+Building Graph...
+Starting BFS...
+Number of components: 2746
+The 5 Biggest are: 
+[855803, 404, 384, 319, 253]
+Starting DFS...
+Number of components: 2746
+The 5 Biggest are: 
+[855803, 404, 384, 319, 253]

@@ -1,0 +1,89 @@
+Assignment 6
+Daniel Ravina
+
+
+Book Exercises - Page 186
+-------------------------
+
+1. (a)
+  - (inorder)   9, 3, 1, 0, 4, 2, 7, 6, 8, 5
+  - (postorder) 9, 1, 4, 0, 3, 6, 7, 5, 8, 2
+
+                  2
+                /   \
+               /     \
+              3       8
+             /\      / \
+            /  \    /   \
+           9    0  7     5
+               / \  \
+              /   \  \
+             1     4  6
+
+1. (b)
+  Example: inorder:    5,1,4
+           post-order: 4,5,1
+
+1. (c)
+  // Construct a Tree from the inorder and post order lists
+  // input: I - Inorder list
+  //        P - Post Order list
+  //        T - The final constructed tree
+  build(I[0..n-1], P[0..n-1])
+    k := n-1
+    return -1 if I is empty and P is empty
+    add P[k] to tree
+    // Handle left sub tree
+    build( I[0..k-1], P[0..k-1] )
+    // Handle right sub tree
+    build( I[k+1..n-1], P[k..n-2])
+
+    return T
+
+
+  // Visualize:
+    for first iteration k is --> (2)
+
+    I: 9, 3, 1, 0, 4, (2), 7 , 6 , 8
+       -------------- ***  ----------
+          [0..k-1]     k   [k+1..n-1]
+
+    P: 9, 1, 4, 0, 3, 6, 7, 5, 8,  (2)
+       -------------- ------------ ***
+          [0..k-1]      [k..n-2]    k
+
+
+1. (d)
+  see binaryTree.java
+1. (e)
+  Input:
+  10
+  9 3 1 0 4 2 7 6 8 5
+  9 1 4 0 3 6 7 5 8 2
+
+  Output:
+
+  PreOrder is:
+  [ 2  3  9  0  1  4  8  7  6  5 ]
+
+
+
+Question 1
+===========
+PreOrder is:
+[ 2  3  9  0  1  4  8  7  6  5 ]
+
+Question 2
+===========
+Is Array sorted? (random array of 1000 integers
+false
+My Heap sort doesn't work for large arrays.
+
+Question 3
+===========
+Testing with a heap
+
+[90 85 80 40 65 55 0 ]
+is it a heap? true
+Adding 100 to the heap...
+is it still a heap? true
