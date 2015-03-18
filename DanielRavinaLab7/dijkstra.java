@@ -14,7 +14,7 @@ class Dijkstra {
   }
 
   public static Graph buildGraph(Graph graph) {
-      final int VERTEX_INDEX = 0;
+      final int NODE_INDEX = 0;
 
       try {
         Scanner file = new Scanner(new File("dijkstraData.txt"));
@@ -22,12 +22,12 @@ class Dijkstra {
 
         while(file.hasNextLine()) {
           String line = file.nextLine();
-          String[] verticies = line.split("\\s+");
-          int label = Integer.parseInt(verticies[VERTEX_INDEX]);
+          String[] nodes = line.split("\\s+");
+          int label = Integer.parseInt(nodes[NODE_INDEX]);
           Node node = graph.addNode(label);
 
-          for(int i = VERTEX_INDEX+1; i < verticies.length; ++i) {
-            String node_meta[] = verticies[i].split(",");
+          for(int i = NODE_INDEX+1; i < nodes.length; ++i) {
+            String node_meta[] = nodes[i].split(",");
             int adjacent = Integer.parseInt(node_meta[0]);
             int cost     = Integer.parseInt(node_meta[1]);
             node.addEdge(adjacent, cost);
