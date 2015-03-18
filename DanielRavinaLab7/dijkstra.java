@@ -8,8 +8,8 @@ class Dijkstra {
   public static void main(String[] args) {
     Graph graph = buildGraph(new Graph());
     graph.setShortestPathsFrom(1); // by looking at dijkstraData.txt, the first vertex is 1
-    int[] destinations = {7, 37, 59, 82, 99,115,133,165,188,197};
-    graph.displayShortestPathTo(destinations);
+    int[] nodesToReport = {7, 37, 59, 82, 99,115,133,165,188,197};
+    graph.displayShortestPathTo(nodesToReport);
     // graph.displayAllPaths();
   }
 

@@ -49,14 +49,14 @@ class Graph {
   public void displayShortestPathTo(int[] destinations){
     for (int i = 0; i < destinations.length; i++ ){
       Node dest = getNode(destinations[i]);
-      System.out.println("distance of 1 -> " + destinations[i] + "   is " + dest.getDistance() + ", Predecessor:  " + dest.getPredecessor());
+      System.out.println("Distance of 1 -> " + destinations[i] + " is " + dest.getDistance());
     }
   }
 
   public void displayAllPaths(){
     for(int label : nodes.keySet()) {
       Node dest = getNode(label);
-      System.out.println("Distance of 1 -> " + label + " is " + dest.getDistance() + ", Predecessor: " + dest.getPredecessor());
+      System.out.println("Distance of 1 -> " + label + " is " + dest.getDistance());
     }
   }
 

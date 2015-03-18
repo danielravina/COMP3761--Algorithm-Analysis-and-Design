@@ -1,0 +1,52 @@
+Assignment 7
+Daniel Ravina #A00844542
+March 18, 2015
+
+
+Excerceise 9.1
+==============
+
+1.
+   // If the execution time is known, the only thing that needs to be
+   // done is reorder the the sequence which the execution occurs.
+   Algorithm
+     sort the jobs from the smallest execution time to the largest
+     for each job in jobs execute and continue
+
+   Since the jobs execution time is multiply by the count of t,
+   it will yield the optimal solution when executing the shorts jobs first.
+
+2.
+ a) in case earliest starts first, there will not be an optimal solution.
+    for example:
+      let a1 = 4    let a2 = 6   let a3 = 5
+      let b1 = 10   let b2 = 7   let b3 = 8
+
+      if we order it in a way such that the earliest are first it will be
+      (4, 10) -> (6,7) -> (5,8)
+      when (4,10) is done executing, it will already skip over the other two.
+
+  b) for shortest duration first, we will not get an optimal solution either (using the same intervals)
+    (6,7) -> (5,8) -> (4,10)
+    when (6,7) is over, 5,8 is skipped as well.
+
+  c) Earliest finish first will always yield optimal result:
+
+3.
+  Same as question 3 above, when executing the shortest jobs first, it results in an optimal solution. So in this case,
+  if we send the fastest 2 people together, and then get the fastest person on the other side to return the flashlight, that will be the shortest
+  time for the group to cross the bridge. I have no proof for that. Just using common sence.
+
+
+4. Dijkstra Output:
+
+  Distance of 1 -> 7 is 2599
+  Distance of 1 -> 37 is 2610
+  Distance of 1 -> 59 is 2947
+  Distance of 1 -> 82 is 2052
+  Distance of 1 -> 99 is 2367
+  Distance of 1 -> 115 is 2399
+  Distance of 1 -> 133 is 2029
+  Distance of 1 -> 165 is 2442
+  Distance of 1 -> 188 is 2610
+  Distance of 1 -> 197 is 3068
