@@ -1,10 +1,5 @@
-<style>
-  .caption {color:grey; font-style:italic;}
-  .pb {page-break-after: always;}
-</style>
-
 #MD5 Algorithm
-<div class="caption">By Daniel Ravina,  March 25th, 2015</div>
+<div style="color:grey; font-style:italic;">By Daniel Ravina,  March 25th, 2015</div>
 
 
 ## Introduction
